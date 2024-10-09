@@ -1,0 +1,728 @@
+
+=== [INFORMATION]: 15/03/2024 6:15:06 am ===
+Going to add services.
+
+=== [INFORMATION]: 15/03/2024 6:15:07 am ===
+Added all services.
+
+=== [INFORMATION]: 15/03/2024 6:15:07 am ===
+Added all middlewares.
+
+=== [INFORMATION]: 15/03/2024 6:19:34 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 15/03/2024 6:19:34 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 15/03/2024 6:19:55 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 15/03/2024 6:19:55 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 15/03/2024 6:20:03 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 15/03/2024 6:20:03 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 15/03/2024 6:20:22 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 15/03/2024 6:20:22 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 15/03/2024 6:20:36 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 15/03/2024 6:20:37 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 15/03/2024 6:20:46 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 15/03/2024 6:20:46 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 15/03/2024 6:20:57 am ===
+Entered PatternSetController
+
+=== [EXCEPTION]: 15/03/2024 6:21:03 am ===
+Conversion failed when converting the nvarchar value 'All' to data type bit.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.Read()
+   at Microsoft.Data.SqlClient.SqlCommand.CompleteExecuteScalar(SqlDataReader ds, Boolean returnSqlValue)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at Dapper.SqlMapper.ExecuteScalarImpl[T](IDbConnection cnn, CommandDefinition& command) in /_/Dapper/SqlMapper.cs:line 2957
+   at Dapper.SqlMapper.ExecuteScalar[T](IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in /_/Dapper/SqlMapper.cs:line 560
+   at TyreCompare.DAL.Dapper.TyreCompareRepository_Dapper.PaginatedData_GetPaginationInfo(SqlConnection connection, String tableName, PaginationQuery paginationQuery, String whereClause, Dictionary`2 parameters) in D:\Midas\tyreCompare\tyreCompareAPI\TyreCompare.DAL\Repositories\Dapper\TyreCompareRepository_Dapper.cs:line 293
+   at TyreCompare.DAL.Dapper.TyreCompareRepository_Dapper.GetPaginatedData[Model](String tableName, PaginationQuery paginationQuery) in D:\Midas\tyreCompare\tyreCompareAPI\TyreCompare.DAL\Repositories\Dapper\TyreCompareRepository_Dapper.cs:line 217
+   at TyreCompare.DAL.Dapper.TyreCompareRepository_Dapper.GetPatternSetByPage(PaginationQuery paginationQuery) in D:\Midas\tyreCompare\tyreCompareAPI\TyreCompare.DAL\Repositories\Dapper\TyreCompareRepository_Dapper.cs:line 69
+   at TyreCompare.DAL.TyreCompareService.GetPatternSetByPage(PaginationQuery paginationQuery) in D:\Midas\tyreCompare\tyreCompareAPI\TyreCompare.DAL\TyreCompareService.cs:line 78
+   at TyreCompare.API.Controllers.PatternSetController.GetPatternSet(PaginationQuery paginationQuery) in D:\Midas\tyreCompare\tyreCompareAPI\TyreCompare.CoreWebAPI\Controllers\PatternSetController.cs:line 61
+   at lambda_method9(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+
+=== [INFORMATION]: 15/03/2024 6:21:07 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 15/03/2024 6:21:07 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 15/03/2024 7:01:04 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 15/03/2024 7:01:04 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 15/03/2024 7:01:04 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 15/03/2024 7:11:33 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 15/03/2024 7:11:33 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 15/03/2024 7:11:33 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 15/03/2024 7:18:13 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 15/03/2024 7:18:13 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 15/03/2024 7:18:13 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 15/03/2024 7:18:19 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 15/03/2024 7:18:24 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 15/03/2024 7:18:32 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 15/03/2024 7:18:32 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 15/03/2024 7:18:32 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 15/03/2024 7:22:14 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 15/03/2024 7:22:48 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 15/03/2024 7:22:48 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 15/03/2024 7:22:48 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 15/03/2024 7:22:54 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 15/03/2024 7:22:58 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 15/03/2024 7:23:02 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 15/03/2024 7:23:02 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 15/03/2024 7:23:02 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 15/03/2024 7:23:06 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 15/03/2024 7:23:06 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 15/03/2024 7:23:06 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 15/03/2024 7:23:09 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 15/03/2024 7:43:16 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 15/03/2024 7:43:17 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 15/03/2024 7:43:17 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 15/03/2024 7:43:30 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 15/03/2024 7:43:30 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 15/03/2024 7:43:30 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 15/03/2024 7:57:25 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 5:06:51 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 5:06:51 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 5:07:02 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 5:07:02 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 5:07:24 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 5:07:24 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 5:08:05 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 5:08:25 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 5:08:31 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 5:11:53 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 5:11:53 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 5:11:53 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 5:11:57 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 5:11:57 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 5:11:57 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 5:12:01 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 5:12:06 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 5:12:11 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 5:12:11 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 5:12:11 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 5:13:48 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 5:13:48 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 5:13:48 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 5:13:50 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 5:13:50 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 5:13:50 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 5:15:04 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 5:15:04 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 5:15:04 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 5:15:08 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 5:15:08 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 5:15:08 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 5:15:13 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 5:15:13 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 5:15:13 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 5:20:28 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 5:20:28 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 5:20:29 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 5:24:27 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 5:24:27 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 5:24:27 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 5:24:29 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 5:24:29 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 5:24:29 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 5:31:02 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 5:31:02 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 5:31:02 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 5:31:29 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 5:31:29 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 5:31:29 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 9:45:39 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 9:45:45 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 9:45:48 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 9:45:50 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 9:45:51 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 9:45:52 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 9:45:52 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 9:46:57 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 9:46:58 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 9:47:01 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 9:47:06 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 9:47:12 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 9:48:40 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 9:48:40 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 9:48:49 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 9:49:05 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 9:49:41 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 9:51:29 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 9:51:36 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 9:53:53 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 9:53:53 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 9:53:55 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 9:53:57 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 9:53:58 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 9:53:58 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 9:54:03 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 9:54:03 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 9:54:10 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 9:54:10 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 9:54:10 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 9:54:15 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 9:54:15 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 9:54:15 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 9:54:19 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 9:54:19 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 9:54:20 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 9:54:22 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 9:54:22 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 9:54:22 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 9:54:30 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 9:54:34 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 9:54:36 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 9:54:37 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 9:54:47 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 9:54:47 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 9:54:47 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 9:54:54 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 9:54:57 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 9:54:59 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 9:55:00 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 9:55:01 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 9:55:01 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 9:55:02 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 9:55:03 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 9:55:03 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 9:55:04 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 9:55:05 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 9:55:05 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 9:55:05 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 9:55:06 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 9:55:11 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 9:55:11 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 9:55:14 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 9:55:14 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 9:55:14 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 9:55:17 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 9:55:18 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 9:55:19 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 9:55:19 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 9:57:03 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 9:57:03 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 9:57:07 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 9:57:09 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 9:57:10 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 9:57:11 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 9:57:15 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 9:57:28 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 9:57:28 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 9:57:28 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 9:57:51 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 9:57:56 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 9:58:45 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 9:58:45 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 9:58:45 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 9:58:48 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 9:58:49 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 10:02:01 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 10:02:01 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 10:02:01 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 10:02:11 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 10:02:12 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 10:02:16 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 10:02:17 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 10:02:46 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 10:02:46 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 10:02:46 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 10:02:52 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 10:02:53 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 10:02:56 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 10:02:56 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 10:02:57 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 10:03:01 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 10:03:02 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 10:03:04 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 10:03:05 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 10:20:31 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 10:20:33 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 10:20:34 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 10:20:37 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 10:20:39 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 19/03/2024 10:20:42 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 20/03/2024 10:32:12 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 20/03/2024 10:32:12 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 20/03/2024 10:32:14 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 20/03/2024 10:32:14 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 20/03/2024 10:32:14 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 22/03/2024 7:51:35 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 22/03/2024 7:51:35 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 22/03/2024 7:51:35 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 22/03/2024 8:03:52 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 22/03/2024 8:03:57 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 22/03/2024 8:04:04 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 22/03/2024 8:04:07 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 22/03/2024 8:10:19 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 22/03/2024 8:10:19 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 22/03/2024 8:10:19 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 22/03/2024 10:53:08 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 22/03/2024 10:53:08 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 22/03/2024 10:53:08 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 22/03/2024 10:53:24 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 22/03/2024 10:53:28 am ===
+Entered PatternSetController
