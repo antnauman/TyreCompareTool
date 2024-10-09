@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+	<Version>1.2.0.0</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.0.151" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.1.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TyreCompare.BCL\TyreCompare.BCL.csproj" />
+    <ProjectReference Include="..\TyreCompare.ImageProcessor\TyreCompare.ImageProcessor.csproj" />
+    <ProjectReference Include="..\TyreCompare.Log\TyreCompare.Log.csproj" />
+    <ProjectReference Include="..\TyreCompare.Models\TyreCompare.Models.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Repositories\Mock\" />
+  </ItemGroup>
+
+</Project>

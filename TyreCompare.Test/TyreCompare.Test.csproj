@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+	<Version>1.0.0</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="appsettings.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TyreCompare.BCL\TyreCompare.BCL.csproj" />
+    <ProjectReference Include="..\TyreCompare.DAL\TyreCompare.DAL.csproj" />
+    <ProjectReference Include="..\TyreCompare.ImageProcessor\TyreCompare.ImageProcessor.csproj" />
+    <ProjectReference Include="..\TyreCompare.Log\TyreCompare.Log.csproj" />
+  </ItemGroup>
+
+</Project>

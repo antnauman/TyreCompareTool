@@ -1,0 +1,1680 @@
+
+=== [INFORMATION]: 23/02/2024 6:37:58 am ===
+Going to add services.
+
+=== [INFORMATION]: 23/02/2024 6:37:59 am ===
+Added all services.
+
+=== [INFORMATION]: 23/02/2024 6:37:59 am ===
+Added all middlewares.
+
+=== [EXCEPTION]: 23/02/2024 7:38:42 am ===
+Cannot open database "TyreCompare" requested by the login. The login failed.
+Login failed for user 'DESKTOP-9GDGSH5\Hp'.
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Dapper.SqlMapper.MultiMapImpl[TFirst,TSecond,TThird,TFourth,TFifth,TSixth,TSeventh,TReturn](IDbConnection cnn, CommandDefinition command, Delegate map, String splitOn, DbDataReader reader, Identity identity, Boolean finalize)+MoveNext() in /_/Dapper/SqlMapper.cs:line 1536
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Dapper.SqlMapper.MultiMap[TFirst,TSecond,TThird,TFourth,TFifth,TSixth,TSeventh,TReturn](IDbConnection cnn, String sql, Delegate map, Object param, IDbTransaction transaction, Boolean buffered, String splitOn, Nullable`1 commandTimeout, Nullable`1 commandType) in /_/Dapper/SqlMapper.cs:line 1518
+   at TyreCompare.DAL.Dapper.TyreCompareRepository_Dapper.GetUserByCredentials(String username, String password) in D:\Midas\tyreCompare\tyreCompareAPI\TyreCompare.DAL\Repositories\Dapper\TyreCompareRepository_Dapper.cs:line 105
+   at TyreCompare.DAL.TyreCompareService.ValidateUser(String username, String password) in D:\Midas\tyreCompare\tyreCompareAPI\TyreCompare.DAL\TyreCompareService.cs:line 154
+   at TyreCompare.API.Controllers.UserController.LoginUser(UserCredentials userCredentials) in D:\Midas\tyreCompare\tyreCompareAPI\TyreCompare.CoreWebAPI\Controllers\UserController.cs:line 36
+   at lambda_method3(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+
+=== [INFORMATION]: 23/02/2024 7:42:33 am ===
+Going to add services.
+
+=== [INFORMATION]: 23/02/2024 7:42:34 am ===
+Added all services.
+
+=== [INFORMATION]: 23/02/2024 7:42:34 am ===
+Added all middlewares.
+
+=== [INFORMATION]: 23/02/2024 8:05:07 am ===
+Going to add services.
+
+=== [INFORMATION]: 23/02/2024 8:05:08 am ===
+Added all services.
+
+=== [INFORMATION]: 23/02/2024 8:05:09 am ===
+Added all middlewares.
+
+=== [INFORMATION]: 23/02/2024 8:07:23 am ===
+Going to add services.
+
+=== [INFORMATION]: 23/02/2024 8:07:24 am ===
+Added all services.
+
+=== [INFORMATION]: 23/02/2024 8:07:25 am ===
+Added all middlewares.
+
+=== [EXCEPTION]: 23/02/2024 8:07:53 am ===
+Cannot open database "TyreCompare" requested by the login. The login failed.
+Login failed for user 'DESKTOP-9GDGSH5\Hp'.
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Dapper.SqlMapper.MultiMapImpl[TFirst,TSecond,TThird,TFourth,TFifth,TSixth,TSeventh,TReturn](IDbConnection cnn, CommandDefinition command, Delegate map, String splitOn, DbDataReader reader, Identity identity, Boolean finalize)+MoveNext() in /_/Dapper/SqlMapper.cs:line 1536
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Dapper.SqlMapper.MultiMap[TFirst,TSecond,TThird,TFourth,TFifth,TSixth,TSeventh,TReturn](IDbConnection cnn, String sql, Delegate map, Object param, IDbTransaction transaction, Boolean buffered, String splitOn, Nullable`1 commandTimeout, Nullable`1 commandType) in /_/Dapper/SqlMapper.cs:line 1518
+   at TyreCompare.DAL.Dapper.TyreCompareRepository_Dapper.GetUserByCredentials(String username, String password) in D:\Midas\tyreCompare\tyreCompareAPI\TyreCompare.DAL\Repositories\Dapper\TyreCompareRepository_Dapper.cs:line 105
+   at TyreCompare.DAL.TyreCompareService.ValidateUser(String username, String password) in D:\Midas\tyreCompare\tyreCompareAPI\TyreCompare.DAL\TyreCompareService.cs:line 154
+   at TyreCompare.API.Controllers.UserController.LoginUser(UserCredentials userCredentials) in D:\Midas\tyreCompare\tyreCompareAPI\TyreCompare.CoreWebAPI\Controllers\UserController.cs:line 36
+   at lambda_method3(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+
+=== [EXCEPTION]: 23/02/2024 8:08:38 am ===
+Cannot open database "TyreCompare" requested by the login. The login failed.
+Login failed for user 'DESKTOP-9GDGSH5\Hp'.
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Dapper.SqlMapper.MultiMapImpl[TFirst,TSecond,TThird,TFourth,TFifth,TSixth,TSeventh,TReturn](IDbConnection cnn, CommandDefinition command, Delegate map, String splitOn, DbDataReader reader, Identity identity, Boolean finalize)+MoveNext() in /_/Dapper/SqlMapper.cs:line 1536
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Dapper.SqlMapper.MultiMap[TFirst,TSecond,TThird,TFourth,TFifth,TSixth,TSeventh,TReturn](IDbConnection cnn, String sql, Delegate map, Object param, IDbTransaction transaction, Boolean buffered, String splitOn, Nullable`1 commandTimeout, Nullable`1 commandType) in /_/Dapper/SqlMapper.cs:line 1518
+   at TyreCompare.DAL.Dapper.TyreCompareRepository_Dapper.GetUserByCredentials(String username, String password) in D:\Midas\tyreCompare\tyreCompareAPI\TyreCompare.DAL\Repositories\Dapper\TyreCompareRepository_Dapper.cs:line 105
+   at TyreCompare.DAL.TyreCompareService.ValidateUser(String username, String password) in D:\Midas\tyreCompare\tyreCompareAPI\TyreCompare.DAL\TyreCompareService.cs:line 154
+   at TyreCompare.API.Controllers.UserController.LoginUser(UserCredentials userCredentials) in D:\Midas\tyreCompare\tyreCompareAPI\TyreCompare.CoreWebAPI\Controllers\UserController.cs:line 36
+   at lambda_method3(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+
+=== [EXCEPTION]: 23/02/2024 8:11:06 am ===
+Cannot open database "TyreCompare" requested by the login. The login failed.
+Login failed for user 'DESKTOP-9GDGSH5\Hp'.
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Dapper.SqlMapper.MultiMapImpl[TFirst,TSecond,TThird,TFourth,TFifth,TSixth,TSeventh,TReturn](IDbConnection cnn, CommandDefinition command, Delegate map, String splitOn, DbDataReader reader, Identity identity, Boolean finalize)+MoveNext() in /_/Dapper/SqlMapper.cs:line 1536
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Dapper.SqlMapper.MultiMap[TFirst,TSecond,TThird,TFourth,TFifth,TSixth,TSeventh,TReturn](IDbConnection cnn, String sql, Delegate map, Object param, IDbTransaction transaction, Boolean buffered, String splitOn, Nullable`1 commandTimeout, Nullable`1 commandType) in /_/Dapper/SqlMapper.cs:line 1518
+   at TyreCompare.DAL.Dapper.TyreCompareRepository_Dapper.GetUserByCredentials(String username, String password) in D:\Midas\tyreCompare\tyreCompareAPI\TyreCompare.DAL\Repositories\Dapper\TyreCompareRepository_Dapper.cs:line 105
+   at TyreCompare.DAL.TyreCompareService.ValidateUser(String username, String password) in D:\Midas\tyreCompare\tyreCompareAPI\TyreCompare.DAL\TyreCompareService.cs:line 154
+   at TyreCompare.API.Controllers.UserController.LoginUser(UserCredentials userCredentials) in D:\Midas\tyreCompare\tyreCompareAPI\TyreCompare.CoreWebAPI\Controllers\UserController.cs:line 36
+   at lambda_method3(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+
+=== [EXCEPTION]: 23/02/2024 8:11:13 am ===
+Cannot open database "TyreCompare" requested by the login. The login failed.
+Login failed for user 'DESKTOP-9GDGSH5\Hp'.
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Dapper.SqlMapper.MultiMapImpl[TFirst,TSecond,TThird,TFourth,TFifth,TSixth,TSeventh,TReturn](IDbConnection cnn, CommandDefinition command, Delegate map, String splitOn, DbDataReader reader, Identity identity, Boolean finalize)+MoveNext() in /_/Dapper/SqlMapper.cs:line 1536
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Dapper.SqlMapper.MultiMap[TFirst,TSecond,TThird,TFourth,TFifth,TSixth,TSeventh,TReturn](IDbConnection cnn, String sql, Delegate map, Object param, IDbTransaction transaction, Boolean buffered, String splitOn, Nullable`1 commandTimeout, Nullable`1 commandType) in /_/Dapper/SqlMapper.cs:line 1518
+   at TyreCompare.DAL.Dapper.TyreCompareRepository_Dapper.GetUserByCredentials(String username, String password) in D:\Midas\tyreCompare\tyreCompareAPI\TyreCompare.DAL\Repositories\Dapper\TyreCompareRepository_Dapper.cs:line 105
+   at TyreCompare.DAL.TyreCompareService.ValidateUser(String username, String password) in D:\Midas\tyreCompare\tyreCompareAPI\TyreCompare.DAL\TyreCompareService.cs:line 154
+   at TyreCompare.API.Controllers.UserController.LoginUser(UserCredentials userCredentials) in D:\Midas\tyreCompare\tyreCompareAPI\TyreCompare.CoreWebAPI\Controllers\UserController.cs:line 36
+   at lambda_method3(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+
+=== [INFORMATION]: 23/02/2024 8:12:11 am ===
+Cannot connect to Db
+
+
+=== [INFORMATION]: 23/02/2024 8:14:17 am ===
+Going to add services.
+
+=== [INFORMATION]: 23/02/2024 8:14:18 am ===
+Added all services.
+
+=== [INFORMATION]: 23/02/2024 8:14:18 am ===
+Added all middlewares.
+
+=== [INFORMATION]: 23/02/2024 8:14:39 am ===
+Cannot connect to Db
+
+
+=== [INFORMATION]: 23/02/2024 8:25:21 am ===
+Cannot connect to Db
+
+
+=== [INFORMATION]: 23/02/2024 8:59:21 am ===
+Data Source=DESKTOP-9GDGSH5\MSSQLSERVER01; Initial Catalog=TyreCompare; Trusted_Connection=True; TrustServerCertificate=True; Integrated Security=True;
+
+=== [INFORMATION]: 23/02/2024 9:01:50 am ===
+Data Source=DESKTOP-9GDGSH5\MSSQLSERVER01; Initial Catalog=TyreCompare; Trusted_Connection=True; TrustServerCertificate=True; Integrated Security=True;
+
+=== [INFORMATION]: 23/02/2024 9:03:04 am ===
+Can connect to Db
+Can open Db connection with connection string:
+Data Source=DESKTOP-9GDGSH5\MSSQLSERVER01; Initial Catalog=TyreCompare; Trusted_Connection=True; TrustServerCertificate=True; Integrated Security=True;
+
+
+=== [INFORMATION]: 23/02/2024 9:05:50 am ===
+Cannot connect to Db
+
+
+=== [INFORMATION]: 23/02/2024 9:08:22 am ===
+Going to add services.
+
+=== [INFORMATION]: 23/02/2024 9:08:23 am ===
+Added all services.
+
+=== [INFORMATION]: 23/02/2024 9:08:24 am ===
+Added all middlewares.
+
+=== [EXCEPTION]: 23/02/2024 9:09:17 am ===
+Cannot open database "TyreCompare" requested by the login. The login failed.
+Login failed for user 'DESKTOP-9GDGSH5\Hp'.
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.CompleteLogin(Boolean enlistOK)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at TyreCompare.DAL.Dapper.TyreCompareRepository_Dapper.GetAllData[Model](String tableName, String columns, String whereClause, String groupClause, Object parameters, String orderClause) in D:\Midas\tyreCompare\tyreCompareAPI\TyreCompare.DAL\Repositories\Dapper\TyreCompareRepository_Dapper.cs:line 205
+   at TyreCompare.DAL.Dapper.TyreCompareRepository_Dapper.GetAllBrandNames() in D:\Midas\tyreCompare\tyreCompareAPI\TyreCompare.DAL\Repositories\Dapper\TyreCompareRepository_Dapper.cs:line 21
+   at TyreCompare.DAL.TyreCompareService.GetAllBrandNames() in D:\Midas\tyreCompare\tyreCompareAPI\TyreCompare.DAL\TyreCompareService.cs:line 176
+   at TyreCompare.API.Controllers.BrandController.GetAllBrandNames() in D:\Midas\tyreCompare\tyreCompareAPI\TyreCompare.CoreWebAPI\Controllers\BrandController.cs:line 24
+   at lambda_method3(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+
+=== [INFORMATION]: 23/02/2024 9:11:29 am ===
+Going to add services.
+
+=== [INFORMATION]: 23/02/2024 9:11:30 am ===
+Added all services.
+
+=== [INFORMATION]: 23/02/2024 9:11:31 am ===
+Added all middlewares.
+
+=== [INFORMATION]: 23/02/2024 9:11:57 am ===
+Cannot connect to Db
+
+
+=== [INFORMATION]: 23/02/2024 9:12:53 am ===
+Going to add services.
+
+=== [INFORMATION]: 23/02/2024 9:12:54 am ===
+Added all services.
+
+=== [INFORMATION]: 23/02/2024 9:12:55 am ===
+Added all middlewares.
+
+=== [INFORMATION]: 23/02/2024 9:13:14 am ===
+Cannot connect to Db
+
+
+=== [INFORMATION]: 23/02/2024 9:19:36 am ===
+Cannot connect to Db
+
+
+=== [INFORMATION]: 23/02/2024 9:20:31 am ===
+Going to add services.
+
+=== [INFORMATION]: 23/02/2024 9:20:34 am ===
+Added all services.
+
+=== [INFORMATION]: 23/02/2024 9:20:37 am ===
+Added all middlewares.
+
+=== [INFORMATION]: 23/02/2024 9:21:21 am ===
+Cannot connect to Db
+
+
+=== [INFORMATION]: 23/02/2024 9:24:17 am ===
+Cannot connect to Db
+
+
+=== [INFORMATION]: 23/02/2024 9:35:32 am ===
+Cannot connect to Db
+
+
+=== [INFORMATION]: 23/02/2024 9:45:39 am ===
+Cannot connect to Db
+
+
+=== [INFORMATION]: 23/02/2024 9:47:27 am ===
+Going to add services.
+
+=== [INFORMATION]: 23/02/2024 9:47:28 am ===
+Added all services.
+
+=== [INFORMATION]: 23/02/2024 9:47:28 am ===
+Added all middlewares.
+
+=== [INFORMATION]: 23/02/2024 9:47:48 am ===
+Cannot connect to Db
+
+
+=== [INFORMATION]: 23/02/2024 9:58:36 am ===
+Cannot connect to Db
+
+
+=== [INFORMATION]: 23/02/2024 9:58:57 am ===
+Going to add services.
+
+=== [INFORMATION]: 23/02/2024 9:58:58 am ===
+Added all services.
+
+=== [INFORMATION]: 23/02/2024 9:58:59 am ===
+Added all middlewares.
+
+=== [INFORMATION]: 23/02/2024 9:59:23 am ===
+Cannot connect to Db
+
+
+=== [INFORMATION]: 23/02/2024 10:04:05 am ===
+Cannot connect to Db
+
+
+=== [INFORMATION]: 23/02/2024 10:04:57 am ===
+Going to add services.
+
+=== [INFORMATION]: 23/02/2024 10:04:59 am ===
+Added all services.
+
+=== [INFORMATION]: 23/02/2024 10:05:00 am ===
+Added all middlewares.
+
+=== [INFORMATION]: 23/02/2024 10:05:23 am ===
+Cannot connect to Db
+
+
+=== [INFORMATION]: 23/02/2024 10:08:34 am ===
+Going to add services.
+
+=== [INFORMATION]: 23/02/2024 10:08:36 am ===
+Added all services.
+
+=== [INFORMATION]: 23/02/2024 10:08:36 am ===
+Added all middlewares.
+
+=== [INFORMATION]: 23/02/2024 10:09:19 am ===
+Cannot connect to Db
+
+
+=== [INFORMATION]: 23/02/2024 10:09:37 am ===
+Going to add services.
+
+=== [INFORMATION]: 23/02/2024 10:11:22 am ===
+Going to add services.
+
+=== [INFORMATION]: 23/02/2024 10:12:34 am ===
+Going to add services.
+
+=== [INFORMATION]: 23/02/2024 10:12:46 am ===
+Added all services.
+
+=== [INFORMATION]: 23/02/2024 10:12:46 am ===
+Added all middlewares.
+
+=== [INFORMATION]: 23/02/2024 10:13:15 am ===
+Can connect to Db
+Can open Db connection with connection string:
+Data Source=DESKTOP-9GDGSH5\MSSQLSERVER01; Initial Catalog=TyreCompare; Trusted_Connection=True; TrustServerCertificate=True; Integrated Security=True;
+
+
+=== [EXCEPTION]: 23/02/2024 10:13:39 am ===
+Could not find file 'D:\Midas\tyreCompare\tyreCompareAPI\TyreCompare.CoreWebAPI\Logs\user'.
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.CreateFile(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String fullPath, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.OSFileStreamStrategy..ctor(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategyCore(String path, FileMode mode, FileAccess access, FileShare share, FileOptions options, Int64 preallocationSize)
+   at System.IO.Strategies.FileStreamHelpers.ChooseStrategy(FileStream fileStream, String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, Int64 preallocationSize)
+   at System.IO.File.ReadAllBytes(String path)
+   at TyreCompare.API.Controllers.LogController.GetLogFile(String fileName) in D:\Midas\tyreCompare\tyreCompareAPI\TyreCompare.CoreWebAPI\Controllers\LogController.cs:line 35
+   at lambda_method5(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+
+=== [INFORMATION]: 23/02/2024 10:15:45 am ===
+Data Source=DESKTOP-9GDGSH5\MSSQLSERVER01; Initial Catalog=TyreCompare; Trusted_Connection=True; TrustServerCertificate=True; Integrated Security=False; User ID=aman; Password=12345678
+
+=== [INFORMATION]: 23/02/2024 10:16:13 am ===
+Can connect to Db
+Can open Db connection with connection string:
+Data Source=DESKTOP-9GDGSH5\MSSQLSERVER01; Initial Catalog=TyreCompare; Trusted_Connection=True; TrustServerCertificate=True; Integrated Security=True;
+
+
+=== [INFORMATION]: 23/02/2024 10:17:00 am ===
+Can connect to Db
+Can open Db connection with connection string:
+Data Source=DESKTOP-9GDGSH5\MSSQLSERVER01; Initial Catalog=TyreCompare; Trusted_Connection=True; TrustServerCertificate=True; Integrated Security=True;
+
+
+=== [INFORMATION]: 23/02/2024 10:37:52 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 23/02/2024 10:37:52 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 23/02/2024 10:58:25 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 23/02/2024 10:58:25 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 23/02/2024 11:01:01 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 23/02/2024 11:01:01 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 23/02/2024 11:09:25 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 23/02/2024 11:09:25 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 23/02/2024 11:09:48 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 23/02/2024 11:09:48 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 23/02/2024 11:11:35 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 23/02/2024 11:11:35 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 23/02/2024 11:28:33 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 23/02/2024 11:28:41 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 23/02/2024 11:28:46 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 23/02/2024 11:28:50 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 23/02/2024 11:28:54 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 23/02/2024 11:28:54 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 23/02/2024 11:29:13 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 23/02/2024 11:29:17 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 23/02/2024 11:29:21 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 23/02/2024 11:29:25 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 23/02/2024 11:29:37 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 23/02/2024 11:29:44 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 23/02/2024 11:29:47 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 23/02/2024 11:31:32 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 23/02/2024 11:31:37 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 23/02/2024 11:31:40 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 23/02/2024 11:31:43 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 23/02/2024 11:31:46 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 23/02/2024 11:31:48 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 23/02/2024 11:31:51 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 23/02/2024 1:30:46 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 23/02/2024 1:30:46 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 23/02/2024 1:30:57 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 23/02/2024 1:31:01 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 23/02/2024 1:31:04 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 23/02/2024 1:31:05 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 23/02/2024 1:31:08 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 23/02/2024 1:31:11 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 23/02/2024 1:31:16 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 23/02/2024 1:31:21 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 23/02/2024 1:31:26 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 23/02/2024 1:31:37 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 23/02/2024 1:31:43 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 23/02/2024 1:31:48 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 23/02/2024 1:32:05 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 23/02/2024 1:32:13 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 23/02/2024 1:32:28 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 23/02/2024 1:32:28 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 23/02/2024 1:32:39 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 23/02/2024 1:32:41 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 23/02/2024 1:32:49 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 23/02/2024 1:32:52 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 23/02/2024 1:32:53 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 23/02/2024 1:32:53 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 23/02/2024 1:32:55 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 23/02/2024 1:32:58 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 23/02/2024 1:33:03 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 23/02/2024 1:33:10 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 23/02/2024 1:33:33 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 23/02/2024 1:33:47 pm ===
+Entered PatternSetController
+
+=== [EXCEPTION]: 23/02/2024 1:34:31 pm ===
+Brand not found.
+   at TyreCompare.API.Controllers.PatternSetController.GetPatternSet(String brand) in D:\Midas\tyreCompare\tyreCompareAPI\TyreCompare.CoreWebAPI\Controllers\PatternSetController.cs:line 37
+   at lambda_method45(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+
+=== [INFORMATION]: 23/02/2024 1:34:34 pm ===
+Entered PatternSetController
+
+=== [EXCEPTION]: 23/02/2024 1:34:40 pm ===
+Brand not found.
+   at TyreCompare.API.Controllers.PatternSetController.GetPatternSet(String brand) in D:\Midas\tyreCompare\tyreCompareAPI\TyreCompare.CoreWebAPI\Controllers\PatternSetController.cs:line 37
+   at lambda_method45(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+
+=== [INFORMATION]: 23/02/2024 1:35:05 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 23/02/2024 1:35:16 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 23/02/2024 1:39:16 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 23/02/2024 1:39:22 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 26/02/2024 7:58:42 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 26/02/2024 7:58:42 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 26/02/2024 7:58:58 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 26/02/2024 7:58:58 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 26/02/2024 8:13:15 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 26/02/2024 8:13:20 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 26/02/2024 8:14:06 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 26/02/2024 8:14:06 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 26/02/2024 8:14:17 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 26/02/2024 8:14:17 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 26/02/2024 8:14:24 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 26/02/2024 8:14:30 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 26/02/2024 8:14:42 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 26/02/2024 8:14:42 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 26/02/2024 8:16:04 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 26/02/2024 8:16:04 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 26/02/2024 8:16:15 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 26/02/2024 8:16:15 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 26/02/2024 8:16:20 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 26/02/2024 8:16:24 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 26/02/2024 8:16:28 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 26/02/2024 8:16:28 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 26/02/2024 8:16:36 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 26/02/2024 8:16:47 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 26/02/2024 8:16:47 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 26/02/2024 8:16:59 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 26/02/2024 8:17:03 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 26/02/2024 8:17:05 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 26/02/2024 8:17:11 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 26/02/2024 8:17:20 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 26/02/2024 8:17:25 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 26/02/2024 8:17:35 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 26/02/2024 8:17:35 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 26/02/2024 8:17:43 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 26/02/2024 8:17:43 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 26/02/2024 8:17:57 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 26/02/2024 8:17:57 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 26/02/2024 8:18:00 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 26/02/2024 8:18:05 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 26/02/2024 8:18:10 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 26/02/2024 8:18:10 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 26/02/2024 8:18:18 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 26/02/2024 8:18:18 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 7:14:04 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 7:14:04 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 7:18:25 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 7:18:28 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 7:19:02 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 7:21:47 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 7:21:47 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 7:21:57 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 7:22:09 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 7:22:21 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 7:22:21 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 7:22:44 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 7:22:51 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 7:23:02 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 7:23:10 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 7:23:15 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 7:23:19 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 7:34:48 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 7:34:48 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 7:35:17 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 7:35:30 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 7:35:50 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 7:35:50 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 7:35:58 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 7:36:06 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 7:36:12 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 7:36:17 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 8:13:09 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 8:13:09 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 8:13:29 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 8:13:36 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 8:13:45 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 8:13:54 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 8:14:02 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 8:14:11 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 8:14:17 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 8:14:22 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 8:14:30 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 8:14:36 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 8:14:41 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 8:14:56 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 8:14:57 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 8:15:05 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 8:15:05 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 8:15:17 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 8:15:21 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 8:15:21 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 8:15:26 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 8:15:26 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 8:15:35 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 8:15:35 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 8:16:32 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 8:16:32 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 8:16:40 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 8:16:44 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 8:16:44 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 8:16:57 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 8:17:46 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 8:17:54 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 8:17:54 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 8:18:53 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 8:18:53 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 8:19:08 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 8:19:09 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 8:19:22 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 8:19:22 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 8:20:13 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 8:20:13 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 9:06:00 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 9:06:00 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 9:06:06 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 9:06:10 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 9:06:10 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 9:06:23 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 9:06:23 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 9:06:30 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 9:06:35 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 9:06:36 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 9:06:43 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 9:06:48 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 9:06:48 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 9:06:59 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 9:07:02 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 9:07:02 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 9:11:00 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 9:11:00 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 9:11:07 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 9:11:14 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 9:11:14 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 9:11:30 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 9:11:30 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 9:13:09 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 9:13:17 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 9:13:19 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 9:13:24 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 9:13:24 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 9:13:31 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 9:13:36 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 9:13:42 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 9:13:51 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 9:13:51 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 10:01:45 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 10:01:45 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 11:09:23 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 11:09:23 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 11:12:18 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 11:12:18 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 11:12:28 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 11:12:28 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 11:57:25 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 11:57:25 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 11:57:33 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 11:57:33 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 11:57:45 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 11:57:45 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 11:58:33 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 11:58:33 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 11:58:50 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 11:58:50 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 11:59:33 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 11:59:33 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 11:59:48 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 11:59:48 am ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 12:00:45 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 12:00:45 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 12:00:54 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 12:00:54 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 12:04:28 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 12:04:28 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 12:04:32 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 12:04:32 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 12:04:41 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 12:04:41 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 12:04:46 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 12:04:46 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 12:04:54 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 12:04:54 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 12:05:00 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 12:05:00 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 12:05:07 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 12:05:07 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 12:05:30 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 12:05:30 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 12:05:34 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 12:05:35 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 12:05:36 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 12:05:37 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 12:05:39 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 12:05:40 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 12:05:45 pm ===
+Entered PatternSetController
+
+=== [EXCEPTION]: 27/02/2024 12:05:51 pm ===
+Conversion failed when converting the nvarchar value 'All' to data type bit.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.Read()
+   at Microsoft.Data.SqlClient.SqlCommand.CompleteExecuteScalar(SqlDataReader ds, Boolean returnSqlValue)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at Dapper.SqlMapper.ExecuteScalarImpl[T](IDbConnection cnn, CommandDefinition& command) in /_/Dapper/SqlMapper.cs:line 2957
+   at Dapper.SqlMapper.ExecuteScalar[T](IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in /_/Dapper/SqlMapper.cs:line 560
+   at TyreCompare.DAL.Dapper.TyreCompareRepository_Dapper.PaginatedData_GetPaginationInfo(SqlConnection connection, String tableName, PaginationQuery paginationQuery, String whereClause, Dictionary`2 parameters) in D:\Midas\tyreCompare\tyreCompareAPI\TyreCompare.DAL\Repositories\Dapper\TyreCompareRepository_Dapper.cs:line 293
+   at TyreCompare.DAL.Dapper.TyreCompareRepository_Dapper.GetPaginatedData[Model](String tableName, PaginationQuery paginationQuery) in D:\Midas\tyreCompare\tyreCompareAPI\TyreCompare.DAL\Repositories\Dapper\TyreCompareRepository_Dapper.cs:line 217
+   at TyreCompare.DAL.Dapper.TyreCompareRepository_Dapper.GetPatternSetByPage(PaginationQuery paginationQuery) in D:\Midas\tyreCompare\tyreCompareAPI\TyreCompare.DAL\Repositories\Dapper\TyreCompareRepository_Dapper.cs:line 69
+   at TyreCompare.DAL.TyreCompareService.GetPatternSetByPage(PaginationQuery paginationQuery) in D:\Midas\tyreCompare\tyreCompareAPI\TyreCompare.DAL\TyreCompareService.cs:line 78
+   at TyreCompare.API.Controllers.PatternSetController.GetPatternSet(PaginationQuery paginationQuery) in D:\Midas\tyreCompare\tyreCompareAPI\TyreCompare.CoreWebAPI\Controllers\PatternSetController.cs:line 61
+   at lambda_method40(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+
+=== [INFORMATION]: 27/02/2024 12:06:03 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 12:06:03 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 12:06:57 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 12:06:57 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 12:07:04 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 12:07:04 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 12:07:23 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 12:07:23 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 12:07:38 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 12:07:38 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 12:07:47 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 12:07:47 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 12:08:24 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 12:08:24 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 12:08:33 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 12:08:33 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 12:08:43 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 12:08:43 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 12:08:47 pm ===
+Entered PatternSetController
+
+=== [EXCEPTION]: 27/02/2024 12:08:54 pm ===
+Conversion failed when converting the nvarchar value 'All' to data type bit.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.Read()
+   at Microsoft.Data.SqlClient.SqlCommand.CompleteExecuteScalar(SqlDataReader ds, Boolean returnSqlValue)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at Dapper.SqlMapper.ExecuteScalarImpl[T](IDbConnection cnn, CommandDefinition& command) in /_/Dapper/SqlMapper.cs:line 2957
+   at Dapper.SqlMapper.ExecuteScalar[T](IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in /_/Dapper/SqlMapper.cs:line 560
+   at TyreCompare.DAL.Dapper.TyreCompareRepository_Dapper.PaginatedData_GetPaginationInfo(SqlConnection connection, String tableName, PaginationQuery paginationQuery, String whereClause, Dictionary`2 parameters) in D:\Midas\tyreCompare\tyreCompareAPI\TyreCompare.DAL\Repositories\Dapper\TyreCompareRepository_Dapper.cs:line 293
+   at TyreCompare.DAL.Dapper.TyreCompareRepository_Dapper.GetPaginatedData[Model](String tableName, PaginationQuery paginationQuery) in D:\Midas\tyreCompare\tyreCompareAPI\TyreCompare.DAL\Repositories\Dapper\TyreCompareRepository_Dapper.cs:line 217
+   at TyreCompare.DAL.Dapper.TyreCompareRepository_Dapper.GetPatternSetByPage(PaginationQuery paginationQuery) in D:\Midas\tyreCompare\tyreCompareAPI\TyreCompare.DAL\Repositories\Dapper\TyreCompareRepository_Dapper.cs:line 69
+   at TyreCompare.DAL.TyreCompareService.GetPatternSetByPage(PaginationQuery paginationQuery) in D:\Midas\tyreCompare\tyreCompareAPI\TyreCompare.DAL\TyreCompareService.cs:line 78
+   at TyreCompare.API.Controllers.PatternSetController.GetPatternSet(PaginationQuery paginationQuery) in D:\Midas\tyreCompare\tyreCompareAPI\TyreCompare.CoreWebAPI\Controllers\PatternSetController.cs:line 61
+   at lambda_method40(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+
+=== [INFORMATION]: 27/02/2024 12:09:22 pm ===
+Entered PatternSetController
+
+=== [EXCEPTION]: 27/02/2024 12:09:32 pm ===
+Conversion failed when converting the nvarchar value 'All' to data type bit.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.Read()
+   at Microsoft.Data.SqlClient.SqlCommand.CompleteExecuteScalar(SqlDataReader ds, Boolean returnSqlValue)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at Dapper.SqlMapper.ExecuteScalarImpl[T](IDbConnection cnn, CommandDefinition& command) in /_/Dapper/SqlMapper.cs:line 2957
+   at Dapper.SqlMapper.ExecuteScalar[T](IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in /_/Dapper/SqlMapper.cs:line 560
+   at TyreCompare.DAL.Dapper.TyreCompareRepository_Dapper.PaginatedData_GetPaginationInfo(SqlConnection connection, String tableName, PaginationQuery paginationQuery, String whereClause, Dictionary`2 parameters) in D:\Midas\tyreCompare\tyreCompareAPI\TyreCompare.DAL\Repositories\Dapper\TyreCompareRepository_Dapper.cs:line 293
+   at TyreCompare.DAL.Dapper.TyreCompareRepository_Dapper.GetPaginatedData[Model](String tableName, PaginationQuery paginationQuery) in D:\Midas\tyreCompare\tyreCompareAPI\TyreCompare.DAL\Repositories\Dapper\TyreCompareRepository_Dapper.cs:line 217
+   at TyreCompare.DAL.Dapper.TyreCompareRepository_Dapper.GetPatternSetByPage(PaginationQuery paginationQuery) in D:\Midas\tyreCompare\tyreCompareAPI\TyreCompare.DAL\Repositories\Dapper\TyreCompareRepository_Dapper.cs:line 69
+   at TyreCompare.DAL.TyreCompareService.GetPatternSetByPage(PaginationQuery paginationQuery) in D:\Midas\tyreCompare\tyreCompareAPI\TyreCompare.DAL\TyreCompareService.cs:line 78
+   at TyreCompare.API.Controllers.PatternSetController.GetPatternSet(PaginationQuery paginationQuery) in D:\Midas\tyreCompare\tyreCompareAPI\TyreCompare.CoreWebAPI\Controllers\PatternSetController.cs:line 61
+   at lambda_method40(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+
+=== [INFORMATION]: 27/02/2024 12:09:36 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 12:09:36 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 12:09:43 pm ===
+Entered PatternSetController
+
+=== [EXCEPTION]: 27/02/2024 12:09:48 pm ===
+Conversion failed when converting the nvarchar value 'All' to data type bit.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.Read()
+   at Microsoft.Data.SqlClient.SqlCommand.CompleteExecuteScalar(SqlDataReader ds, Boolean returnSqlValue)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at Dapper.SqlMapper.ExecuteScalarImpl[T](IDbConnection cnn, CommandDefinition& command) in /_/Dapper/SqlMapper.cs:line 2957
+   at Dapper.SqlMapper.ExecuteScalar[T](IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in /_/Dapper/SqlMapper.cs:line 560
+   at TyreCompare.DAL.Dapper.TyreCompareRepository_Dapper.PaginatedData_GetPaginationInfo(SqlConnection connection, String tableName, PaginationQuery paginationQuery, String whereClause, Dictionary`2 parameters) in D:\Midas\tyreCompare\tyreCompareAPI\TyreCompare.DAL\Repositories\Dapper\TyreCompareRepository_Dapper.cs:line 293
+   at TyreCompare.DAL.Dapper.TyreCompareRepository_Dapper.GetPaginatedData[Model](String tableName, PaginationQuery paginationQuery) in D:\Midas\tyreCompare\tyreCompareAPI\TyreCompare.DAL\Repositories\Dapper\TyreCompareRepository_Dapper.cs:line 217
+   at TyreCompare.DAL.Dapper.TyreCompareRepository_Dapper.GetPatternSetByPage(PaginationQuery paginationQuery) in D:\Midas\tyreCompare\tyreCompareAPI\TyreCompare.DAL\Repositories\Dapper\TyreCompareRepository_Dapper.cs:line 69
+   at TyreCompare.DAL.TyreCompareService.GetPatternSetByPage(PaginationQuery paginationQuery) in D:\Midas\tyreCompare\tyreCompareAPI\TyreCompare.DAL\TyreCompareService.cs:line 78
+   at TyreCompare.API.Controllers.PatternSetController.GetPatternSet(PaginationQuery paginationQuery) in D:\Midas\tyreCompare\tyreCompareAPI\TyreCompare.CoreWebAPI\Controllers\PatternSetController.cs:line 61
+   at lambda_method40(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+
+=== [INFORMATION]: 27/02/2024 12:09:56 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 12:09:56 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 12:10:08 pm ===
+Entered PatternSetController
+
+=== [EXCEPTION]: 27/02/2024 12:11:39 pm ===
+Conversion failed when converting the nvarchar value 'All' to data type bit.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.Read()
+   at Microsoft.Data.SqlClient.SqlCommand.CompleteExecuteScalar(SqlDataReader ds, Boolean returnSqlValue)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at Dapper.SqlMapper.ExecuteScalarImpl[T](IDbConnection cnn, CommandDefinition& command) in /_/Dapper/SqlMapper.cs:line 2957
+   at Dapper.SqlMapper.ExecuteScalar[T](IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in /_/Dapper/SqlMapper.cs:line 560
+   at TyreCompare.DAL.Dapper.TyreCompareRepository_Dapper.PaginatedData_GetPaginationInfo(SqlConnection connection, String tableName, PaginationQuery paginationQuery, String whereClause, Dictionary`2 parameters) in D:\Midas\tyreCompare\tyreCompareAPI\TyreCompare.DAL\Repositories\Dapper\TyreCompareRepository_Dapper.cs:line 293
+   at TyreCompare.DAL.Dapper.TyreCompareRepository_Dapper.GetPaginatedData[Model](String tableName, PaginationQuery paginationQuery) in D:\Midas\tyreCompare\tyreCompareAPI\TyreCompare.DAL\Repositories\Dapper\TyreCompareRepository_Dapper.cs:line 217
+   at TyreCompare.DAL.Dapper.TyreCompareRepository_Dapper.GetPatternSetByPage(PaginationQuery paginationQuery) in D:\Midas\tyreCompare\tyreCompareAPI\TyreCompare.DAL\Repositories\Dapper\TyreCompareRepository_Dapper.cs:line 69
+   at TyreCompare.DAL.TyreCompareService.GetPatternSetByPage(PaginationQuery paginationQuery) in D:\Midas\tyreCompare\tyreCompareAPI\TyreCompare.DAL\TyreCompareService.cs:line 78
+   at TyreCompare.API.Controllers.PatternSetController.GetPatternSet(PaginationQuery paginationQuery) in D:\Midas\tyreCompare\tyreCompareAPI\TyreCompare.CoreWebAPI\Controllers\PatternSetController.cs:line 61
+   at lambda_method40(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+
+=== [INFORMATION]: 27/02/2024 12:11:49 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 12:11:49 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 12:12:29 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 12:12:29 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 12:13:05 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 12:13:10 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 12:13:10 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 12:13:33 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 12:13:39 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 12:13:39 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 12:13:41 pm ===
+Entered PatternSetController
+
+=== [EXCEPTION]: 27/02/2024 12:13:58 pm ===
+Conversion failed when converting the nvarchar value 'All' to data type bit.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.Read()
+   at Microsoft.Data.SqlClient.SqlCommand.CompleteExecuteScalar(SqlDataReader ds, Boolean returnSqlValue)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at Dapper.SqlMapper.ExecuteScalarImpl[T](IDbConnection cnn, CommandDefinition& command) in /_/Dapper/SqlMapper.cs:line 2957
+   at Dapper.SqlMapper.ExecuteScalar[T](IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in /_/Dapper/SqlMapper.cs:line 560
+   at TyreCompare.DAL.Dapper.TyreCompareRepository_Dapper.PaginatedData_GetPaginationInfo(SqlConnection connection, String tableName, PaginationQuery paginationQuery, String whereClause, Dictionary`2 parameters) in D:\Midas\tyreCompare\tyreCompareAPI\TyreCompare.DAL\Repositories\Dapper\TyreCompareRepository_Dapper.cs:line 293
+   at TyreCompare.DAL.Dapper.TyreCompareRepository_Dapper.GetPaginatedData[Model](String tableName, PaginationQuery paginationQuery) in D:\Midas\tyreCompare\tyreCompareAPI\TyreCompare.DAL\Repositories\Dapper\TyreCompareRepository_Dapper.cs:line 217
+   at TyreCompare.DAL.Dapper.TyreCompareRepository_Dapper.GetPatternSetByPage(PaginationQuery paginationQuery) in D:\Midas\tyreCompare\tyreCompareAPI\TyreCompare.DAL\Repositories\Dapper\TyreCompareRepository_Dapper.cs:line 69
+   at TyreCompare.DAL.TyreCompareService.GetPatternSetByPage(PaginationQuery paginationQuery) in D:\Midas\tyreCompare\tyreCompareAPI\TyreCompare.DAL\TyreCompareService.cs:line 78
+   at TyreCompare.API.Controllers.PatternSetController.GetPatternSet(PaginationQuery paginationQuery) in D:\Midas\tyreCompare\tyreCompareAPI\TyreCompare.CoreWebAPI\Controllers\PatternSetController.cs:line 61
+   at lambda_method40(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+
+=== [INFORMATION]: 27/02/2024 12:14:04 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 12:14:04 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 12:14:08 pm ===
+Entered PatternSetController
+
+=== [EXCEPTION]: 27/02/2024 12:14:10 pm ===
+Conversion failed when converting the nvarchar value 'All' to data type bit.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.Read()
+   at Microsoft.Data.SqlClient.SqlCommand.CompleteExecuteScalar(SqlDataReader ds, Boolean returnSqlValue)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at Dapper.SqlMapper.ExecuteScalarImpl[T](IDbConnection cnn, CommandDefinition& command) in /_/Dapper/SqlMapper.cs:line 2957
+   at Dapper.SqlMapper.ExecuteScalar[T](IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in /_/Dapper/SqlMapper.cs:line 560
+   at TyreCompare.DAL.Dapper.TyreCompareRepository_Dapper.PaginatedData_GetPaginationInfo(SqlConnection connection, String tableName, PaginationQuery paginationQuery, String whereClause, Dictionary`2 parameters) in D:\Midas\tyreCompare\tyreCompareAPI\TyreCompare.DAL\Repositories\Dapper\TyreCompareRepository_Dapper.cs:line 293
+   at TyreCompare.DAL.Dapper.TyreCompareRepository_Dapper.GetPaginatedData[Model](String tableName, PaginationQuery paginationQuery) in D:\Midas\tyreCompare\tyreCompareAPI\TyreCompare.DAL\Repositories\Dapper\TyreCompareRepository_Dapper.cs:line 217
+   at TyreCompare.DAL.Dapper.TyreCompareRepository_Dapper.GetPatternSetByPage(PaginationQuery paginationQuery) in D:\Midas\tyreCompare\tyreCompareAPI\TyreCompare.DAL\Repositories\Dapper\TyreCompareRepository_Dapper.cs:line 69
+   at TyreCompare.DAL.TyreCompareService.GetPatternSetByPage(PaginationQuery paginationQuery) in D:\Midas\tyreCompare\tyreCompareAPI\TyreCompare.DAL\TyreCompareService.cs:line 78
+   at TyreCompare.API.Controllers.PatternSetController.GetPatternSet(PaginationQuery paginationQuery) in D:\Midas\tyreCompare\tyreCompareAPI\TyreCompare.CoreWebAPI\Controllers\PatternSetController.cs:line 61
+   at lambda_method40(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+
+=== [INFORMATION]: 27/02/2024 12:59:50 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 12:59:50 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 1:00:31 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 1:00:31 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 1:01:47 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 1:01:47 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 1:01:50 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 1:01:50 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 1:02:30 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 1:02:30 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 1:02:35 pm ===
+Entered PatternSetController
+
+=== [EXCEPTION]: 27/02/2024 1:28:55 pm ===
+Conversion failed when converting the nvarchar value 'All' to data type bit.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.Read()
+   at Microsoft.Data.SqlClient.SqlCommand.CompleteExecuteScalar(SqlDataReader ds, Boolean returnSqlValue)
+   at Microsoft.Data.SqlClient.SqlCommand.ExecuteScalar()
+   at Dapper.SqlMapper.ExecuteScalarImpl[T](IDbConnection cnn, CommandDefinition& command) in /_/Dapper/SqlMapper.cs:line 2957
+   at Dapper.SqlMapper.ExecuteScalar[T](IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType) in /_/Dapper/SqlMapper.cs:line 560
+   at TyreCompare.DAL.Dapper.TyreCompareRepository_Dapper.PaginatedData_GetPaginationInfo(SqlConnection connection, String tableName, PaginationQuery paginationQuery, String whereClause, Dictionary`2 parameters) in D:\Midas\tyreCompare\tyreCompareAPI\TyreCompare.DAL\Repositories\Dapper\TyreCompareRepository_Dapper.cs:line 293
+   at TyreCompare.DAL.Dapper.TyreCompareRepository_Dapper.GetPaginatedData[Model](String tableName, PaginationQuery paginationQuery) in D:\Midas\tyreCompare\tyreCompareAPI\TyreCompare.DAL\Repositories\Dapper\TyreCompareRepository_Dapper.cs:line 217
+   at TyreCompare.DAL.Dapper.TyreCompareRepository_Dapper.GetPatternSetByPage(PaginationQuery paginationQuery) in D:\Midas\tyreCompare\tyreCompareAPI\TyreCompare.DAL\Repositories\Dapper\TyreCompareRepository_Dapper.cs:line 69
+   at TyreCompare.DAL.TyreCompareService.GetPatternSetByPage(PaginationQuery paginationQuery) in D:\Midas\tyreCompare\tyreCompareAPI\TyreCompare.DAL\TyreCompareService.cs:line 78
+   at TyreCompare.API.Controllers.PatternSetController.GetPatternSet(PaginationQuery paginationQuery) in D:\Midas\tyreCompare\tyreCompareAPI\TyreCompare.CoreWebAPI\Controllers\PatternSetController.cs:line 61
+   at lambda_method40(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextExceptionFilterAsync>g__Awaited|26_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+
+=== [INFORMATION]: 27/02/2024 1:29:06 pm ===
+Entered PatternSetController
+
+=== [INFORMATION]: 27/02/2024 1:29:06 pm ===
+Entered PatternSetController
