@@ -12,7 +12,7 @@ public class Program
 {
     //D:\Workspace\TyreCompare\TyreCompare.Test\bin\Debug\net6.0
     private static string FileLogPath;
-    private static string AzureServerPath = "https://midqastore1.blob.core.windows.net";
+    private static string AzureServerPath = "https://account.blob.core.windows.net";
 
     public static void Main(string[] args)
     {
@@ -35,8 +35,8 @@ public class Program
         //CompareAndCopyImages();
         //CopyIrregularImages();
 
-        //VerifyCamApiImages(@"D:\CamImages.txt", "https://midqastore1.blob.core.windows.net/tyreimagesapi");
-        //DownloadCamApiImages(@"D:\BrokenCamImagesNames.txt", "https://tekfirst.cam-systems.co.uk:4013/SourceImages/CAM");
+        //VerifyCamApiImages(@"D:\CamImages.txt", "https://account.blob.core.windows.net/tyreimagesapi");
+        //DownloadCamApiImages(@"D:\BrokenCamImagesNames.txt", "https://website:4013/SourceImages/CAM");
         //DownloadCamApiImages(@"D:\BrokenCamImagesNames.txt", "https://images.tyreintelligence.co.uk/tyreimages");
         //CopyFiles(@"D:\Documents\TyreCompare\Images\FTP Images\A1_Tyre_Images\Original", @"D:\\Documents\\TyreCompare\\Images\\FTP Images\\A1_Tyre_Images\\CorruptedFilesCopy", @"D:\BrokenCamImagesNames.txt");
     }
@@ -211,3 +211,4 @@ public class Program
         }
     }
 }
+
